@@ -1,1 +1,1 @@
-Intel
+QUOTE 101
