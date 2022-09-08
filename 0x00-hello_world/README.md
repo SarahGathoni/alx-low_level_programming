@@ -1,1 +1,1 @@
-Hello, printf
+Print sizes of various data types
