@@ -1,1 +1,1 @@
-alpABET
+print alphabets except e and q
