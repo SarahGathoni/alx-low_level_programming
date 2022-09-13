@@ -7,24 +7,4 @@ int print_sign(int n);
 void jack_bauer(void);
 void times_table(void);
 int add(int a, int b);
-void print_to_98(int n)
-
-
-
-
-
-
-
-
-
-
-#end if
-^C
-[A[A[A
-cd root
-^c
-
-[A[A
-pwd
-$cat
-cd
+void print_to_98(int n);
