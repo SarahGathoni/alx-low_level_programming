@@ -13,7 +13,11 @@ int add(int a, int b)
 {
 	int n;
 
-	n = add(a, b);
+	a = 89;
+
+	b = 9;
+
+	n = add(89, 9);
 	printf("%d\n", n);
 	return (n);
 }
