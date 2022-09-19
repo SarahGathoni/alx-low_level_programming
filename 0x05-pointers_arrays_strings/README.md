@@ -1,1 +1,1 @@
-6-puts2.c
+3-puts.c
