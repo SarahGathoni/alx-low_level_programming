@@ -14,7 +14,7 @@ void puts_half(char *str)
 	while (*(str + a))
 		a++;
 	{
-		c = a / 2
+		c = a / 2;
 			_putchar(c);
 	}
 	if (a % 2 == 0)
