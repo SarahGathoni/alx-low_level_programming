@@ -1,1 +1,1 @@
- function that reverses the content of an array of integers
+ function that encodes a string using rot13
