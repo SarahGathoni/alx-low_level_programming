@@ -1,1 +1,1 @@
-A function that adds 2 numbers
+function that compares two strings
