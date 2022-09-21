@@ -1,1 +1,1 @@
-concatinating strings
+concatinate strings
