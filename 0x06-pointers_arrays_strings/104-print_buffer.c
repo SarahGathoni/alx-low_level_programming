@@ -58,6 +58,8 @@ void printASCII(char *b, int start, int end)
  * print_buffer - prints a buffer
  * @b: string
  * @size: size of buffer
+ *
+ * Return: void
  */
 void print_buffer(char *b, int size)
 {
