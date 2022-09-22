@@ -1,1 +1,1 @@
-function that prints an integer
+a function that encodes a string into 1337
