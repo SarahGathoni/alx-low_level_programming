@@ -9,20 +9,22 @@
  */
 char *rot13(char *s)
 {
-	int c, d;
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char a[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int indx1 = 0, indx2;
 
-	for (a = 0; *(s + c); c++)
+	while (str[indx1])
 	{
-		for (d = 0; d < 52; d++)
+		for (indx2 = 0; indx2 < 52; indx2++)
 		{
-			if (a[b] == *(s + a))
+			if (str[indx1] == alphabet[indx2])
 			{
-				*(s + a) = b[d];
+				str[indx1] = a[indx2];
 				break;
 			}
 		}
+
+		indx1++;
 	}
-	return (s);
+	return (str);
 }
