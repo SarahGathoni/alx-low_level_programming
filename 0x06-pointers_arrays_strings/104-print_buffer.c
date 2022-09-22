@@ -2,47 +2,78 @@
 #include <stdio.h>
 
 /**
- *  print_line - prints a s bytes of a buffer
- *  @c: buffer to print
- *  @s: bytes of buffer to print
- *  @l: line of buffer to print
- *
- *  Return: void
+ * isPrintableASCII - determines if n is a printable ASCII char
+ * @n: integer
+ * Return: 1 if true, 0 if false
+ */
+int isPrintableASCII(int n)
+{
+	return (n >= 32 && n <= 126);
+}
+
+/**
+ * printHexes - print hex values for string b in formatted form
+ * @b: string to print
+ * @start: starting position
+ * @end: ending position
+ */
+void printHexes(char *b, int start, int end)
+{
+	int m = 0;
+
+	while (m < 10)
+	{
+		if (m < end)
+			printf("%02x", *(b + start + m));
+		else
+			printf("  ");
+		if (m % 2)
+			printf(" ");
+		i++;
+	}
+}
+
+/**
+ * printASCII - print ascii values for string b,
+ * formatted to replace nonprintable chars with '.'
+ * @b: string to print
+ * @start: starting position
+ * @end: ending position
+ */
+void printASCII(char *b, int start, int end)
+{
+	int xter, m = 0;
+
+	while (m < end)
+	{
+		xter = *(b + m + start);
+		if (!isPrintableASCII(xter))
+			xter = 46;
+		printf("%c", xter);
+		m++;
+	}
+}
+
+/**
+ * print_buffer - prints a buffer
+ * @b: string
+ * @size: size of buffer
  */
 void print_buffer(char *b, int size)
 {
-	int a, c;
+	int start, end;
 
-	for (a = 0; a < size; a += 10)
+	if (size > 0)
 	{
-		printf("%08x: ", a);
-		for (c = 0; c < 10; c++)
+		for (start = 0; start < size; start += 10)
 		{
-			if ((c + a) >= size)
-				printf("  ");
-			else
-				printf("%02x", *(b + c + a));
-
-			if ((c % 2) != 0 && c != 0)
-				printf(" ");
+			end = (size - start < 10) ? size - start : 10;
+			printf("%08x: ", start);
+			printHexes(b, start, end);
+			printASCII(b, start, end);
+			printf("\n");
 		}
-
-		for (c = 0; c < 10; c++)
-		{
-			if ((c + a) >= size)
-				break;
-
-			else if (*(b + c + a) >= 31 &&
-					*(b + c + a) <= 126)
-				printf("%c", *(b + c + a));
-			else
-				printf(".");
-		}
-		if (a >= size)
-			continue;
-		printf("\n");
-	}
-
-	if (size <= 0)
+	} else
 		printf("\n");
 }
+

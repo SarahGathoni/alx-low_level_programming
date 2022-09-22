@@ -10,3 +10,6 @@ void print_buffer(char *b, int size);
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
+void printASCII(char *b, int start, int end);
+void printHexes(char *b, int start, int end);
+int isPrintableASCII(int n);
