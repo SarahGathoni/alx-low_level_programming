@@ -1,1 +1,1 @@
-a function that prints the chessboard.
+a function that locates a substring
