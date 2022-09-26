@@ -1,1 +1,1 @@
-a function that locates a character in a string.
+a function that fills memory with a constant byte.
