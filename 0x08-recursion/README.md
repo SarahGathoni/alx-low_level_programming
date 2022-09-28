@@ -1,1 +1,1 @@
-Afunction that compares two strings
+prime num
