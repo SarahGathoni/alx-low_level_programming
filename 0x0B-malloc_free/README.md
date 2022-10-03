@@ -1,1 +1,1 @@
-function that concatenates all the arguments of your program.
+ a function that concatenates two strings.
