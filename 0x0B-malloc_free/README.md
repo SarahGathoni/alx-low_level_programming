@@ -1,1 +1,1 @@
-a function that splits a string into words.
+function that concatenates all the arguments of your program.
