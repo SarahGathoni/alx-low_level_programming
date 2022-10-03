@@ -12,6 +12,7 @@
  */
 char *_strdup(char *str);
 {
+	char *strdupli;
 	int index, length = 0;
 
 	if (str == NULL)
@@ -20,15 +21,15 @@ char *_strdup(char *str);
 	for (index = 0; str[index]; index++)
 		length++;
 
-	str =  malloc(sizeof(char) * (len + 1));
+	strdupli =  malloc(sizeof(char) * (len + 1));
 
-	if (str == NULL)
+	if (strdupli == NULL)
 		return (NULL);
 
 	for (index = 0; str[index]; index++)
-		str[index] = str[index];
+		strdupi[index] = str[index];
 
-	str[length] = '\0';
+	strdupli[length] = '\0';
 
-	return (str);
+	return (strdupli);
 }
