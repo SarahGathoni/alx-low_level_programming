@@ -1,1 +1,1 @@
-task 1
+building a ststic library in c
