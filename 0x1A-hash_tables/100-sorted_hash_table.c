@@ -19,13 +19,9 @@ shash_table_t *shash_table_create(unsigned long int size)
 {
 
 	shash_table_t *ht;
-
 	unsigned long int i;
 
-
-
 	ht = malloc(sizeof(shash_table_t));
-
 	if (ht == NULL)
 
 		return (NULL);
@@ -41,6 +37,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
+	
 
 		ht->array[i] = NULL;
 
@@ -144,6 +141,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
+
 
 /**
  * shash_table_get - Retrieve the value associated with
